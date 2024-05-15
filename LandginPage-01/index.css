@@ -1,0 +1,391 @@
+:root {
+    --white: #fff;
+    --white-cream: #F0ECE9;
+    --yellow: #D0C02B;
+    --green: #178D42;
+    --darken-green: #137436;
+    --lighten-gray: #A4A4A4;
+    --lighten-brown: #692E0C;
+    --brown: #401D0A;
+    --dark-gray: #5B5B5B;
+    --dark: #000;
+    --transparent-gray: rgba(15, 10, 6, 0.64);
+    --transparent-dark: rgba(0, 0, 0, 0.547);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    font-family: "Marko One", serif;
+}
+h1, h2, h3, h4 {
+    text-wrap: balance;
+}
+p {
+    text-wrap: pretty;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/* NAV */
+header {
+    position: fixed;
+    top: 40px;
+    width: 100%;
+    background-color: var(--transparent-dark);
+    z-index: 100;
+    padding: 15px 0;
+}
+.nav {
+    display: flex;
+    margin: 0 20px;
+}
+.nav_logo {
+    flex-grow: 1;
+    width: 100%;
+}
+.logo {
+    width: 200px;
+    height: 45px;
+    border-radius: 50px;
+    background-color: #fff;
+    margin: auto;
+}
+.nav_links {
+    flex-grow: 1;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+.nav_links li a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 18px;
+    transition: .3s ease all;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+}
+.nav_links li:first-child a {
+    color: var(--green);
+}
+.nav_links li a:hover {
+    color: var(--green);
+}
+
+/* CONTACT LINKS */
+.contact-links {
+    position: absolute;
+    top: 5px;
+    display: flex;
+    width: 100%;
+
+}
+.social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    flex-grow: 1;
+}
+.social-icons img, .personal-links img {
+    max-height: 25px;
+}
+.personal-links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-grow: 1;
+}
+.personal-links div {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin-left: 10px;
+}
+.personal-links div p {
+    color: var(--white);
+    font-family: "Roboto", sans-serif;
+}
+.personal-links div:nth-of-type(2) p {
+    text-decoration: underline;
+}
+
+
+/* PORTADA */
+.front-page {
+    background-image: url(./img/portada-cafe.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    height: 800px;
+    overflow: hidden;
+}
+.front-page::after {
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: var(--white);
+    bottom: -40px;
+    right: -10px;
+    width: 120%;
+    height: 200px;
+    transform: rotate(-2deg);
+    border-radius: 300% 0% 0% 0%;
+}
+.title-logo {
+    position: absolute;
+    top: 45%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    text-align: center;
+}
+.title-logo div {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+}
+.title-logo h2 span {
+    color: var(--yellow);
+    font-size: 36px;
+    text-shadow: 0px 0px 4px var(--dark);
+}
+.title-logo h2:nth-of-type(2) {
+    color: var(--white);
+    font-size: 36px;
+    text-shadow: 0px 0px 4px var(--dark);
+}
+.title-logo h1 {
+    color: var(--white);
+    font-size: 40px;
+    text-shadow: 0px 0px 4px var(--dark);
+    border-bottom: 2px solid var(--white);
+}
+.title-logo button {
+    color: var(--white);
+    background-color: var(--green);
+    font-size: 17px;
+    height: 40px;
+    width: 130px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: .3s ease background;
+}
+.title-logo button:hover {
+    background-color: var(--darken-green);
+}
+
+/* MAIN */
+.main {
+    display: flex;
+    max-width: 955px;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 10px;
+}
+.description {
+    flex-grow: 1;
+    width: 100%;
+}
+.description p:nth-of-type(1) {
+    font-size: 20px;
+    color: var(--lighten-gray);
+}
+.description h3 {
+    font-size: 30px;
+    color: var(--dark);
+    margin-top: 20px;
+}
+.description p:nth-of-type(2) {
+    font-size: 28px;
+    color: var(--dark-gray);
+    margin-top: 5px;
+}
+.description p:nth-of-type(3) {
+    font-size: 20px;
+    color: var(--lighten-gray);
+    margin-top: 20px;
+}
+.description button {
+    color: var(--white);
+    background-color: var(--green);
+    font-size: 17px;
+    height: 40px;
+    width: 140px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: .3s ease background;
+    margin-top: 20px;
+}
+.description button:hover {
+    background-color: var(--darken-green);
+}
+.coffe-mockup {
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* SECTION CARDS */
+.section-cards {
+    max-width: 955px;
+    margin: 80px auto;
+    padding: 20px;
+    height: 860px;
+
+}
+.dark-card {
+    position: absolute;
+    top: 30px;
+    right: 65px;
+    background-color: var(--transparent-gray);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    height: 420px;
+    width: 430px;
+    border-radius: 10px;
+    z-index: 40;
+}
+.dark-card_details {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 11px;
+    margin-right: 20px;
+}
+.dark-card_details h4 {
+    color: var(--white);
+    font-size: 26px;
+}
+.dark-card_details p {
+    color: var(--white);
+    font-size: 16px;
+    max-width: 300px;
+}
+.dark-card_details button {
+    color: var(--white);
+    background-color: transparent;
+    border: 1px solid var(--white);
+    font-size: 17px;
+    width: 130px;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .3s ease background;
+}
+.dark-card_details button:hover {
+    color: var(--dark);
+    background-color: var(--white);
+}
+.light-card {
+    position: absolute;
+    bottom: 30px;
+    left: 65px;
+    background-color: var(--white-cream);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 420px;
+    width: 430px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 12px var(--dark-gray);
+    z-index: 40;
+}
+.light-card_details {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 11px;
+    margin-left: 20px;
+}
+.light-card_details h4 {
+    color: var(--dark);
+    font-size: 26px;
+}
+.light-card_details p {
+    color: var(--dark);
+    font-size: 16px;
+    max-width: 300px;
+}
+.light-card_details button {
+    color: var(--white);
+    background-color: var(--green);
+    border: none;
+    font-size: 17px;
+    width: 130px;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .3s ease background;
+}
+.light-card_details button:hover {
+    background-color: var(--darken-green);
+}
+.section-cards img:nth-of-type(1) {
+    position: absolute;
+    top: -50px;
+    z-index: 20;
+}
+.section-cards img:nth-of-type(2) {
+    position: absolute;
+    z-index: 20;
+    bottom: 0;
+    right: 40px;
+}
+
+/* FOOTER */
+.footer {
+    height: 670px;
+    width: 100%;
+    background-image: url(./img/footer-espuma-granos-de-cafe.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    text-align: center;
+}
+.footer div p:nth-of-type(1) {
+    color: var(--lighten-brown);
+    font-size: 32px;
+}
+.footer div p:nth-of-type(2) {
+    color: var(--brown);
+    font-size: 48px;
+}
+.footer div p:nth-of-type(3) {
+    color: var(--green);
+    font-size: 22px;
+    margin-top: 15px;
+}
+.footer div button {
+    color: var(--white);
+    background-color: var(--green);
+    border: none;
+    font-size: 17px;
+    width: 130px;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .3s ease background;
+    margin-top: 10px;
+}
+.footer div button:hover {
+    background-color: var(--darken-green);
+}
